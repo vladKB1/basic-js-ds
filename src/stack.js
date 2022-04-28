@@ -13,7 +13,7 @@ const { NotImplementedError } = require('../extensions/index.js');
  *
  */
 
-module.exports = class Stack {
+class Stack {
     arr = new Array();
 
     push(x) {
@@ -28,3 +28,7 @@ module.exports = class Stack {
         return this.arr[this.arr.length - 1];
     }
 }
+
+module.exports = {
+    Stack
+};
