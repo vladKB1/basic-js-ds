@@ -17,23 +17,23 @@ const { ListNode } = require('../extensions/index.js');
 module.exports = class Queue {
     front = null;
     back = null;
-        
+
     getUnderlyingList() {
         return this.front;
     }
 
-    enqueue(x) {        
+    enqueue(x) {
         if (this.back) {
             this.back.next = new ListNode(x);
             this.back = this.back.next;
-        } else 
-        if (!this.back) {
-            this.back = new ListNode(x);
-        }    
+        } else
+            if (!this.back) {
+                this.back = new ListNode(x);
+            }
 
         if (!this.front) {
             this.front = this.back;
-        }         
+        }
     }
 
     dequeue() {
@@ -51,3 +51,7 @@ module.exports = class Queue {
         return x;
     }
 }
+
+module.exports = {
+    Queue
+};
